@@ -82,12 +82,12 @@ var top = 0;
     });
   });
 
-  function onScroll(event) {
+  setTimeout(function onScroll(event) {
     var scrollPos = $(document).scrollTop();
 
     $(".nav a").each(function () {
       var currLink = $(this);
-      var refElement = $(currLink.attr("#href"));
+      var refElement = $(currLink.attr("href"));
       if (
         refElement.position().top <= scrollPos &&
         refElement.position().top + refElement.height() > scrollPos
@@ -98,7 +98,7 @@ var top = 0;
         currLink.removeClass("active");
       }
     });
-  }
+  }, 6000);
 
   // Page loading animation
   $(window).on("load", function () {
