@@ -1,3 +1,4 @@
+var top = 0;
 (function ($) {
   "use strict";
 
@@ -83,7 +84,7 @@
 
   function onScroll(event) {
     var scrollPos = $(document).scrollTop();
-    let top = 0;
+
     $(".nav a").each(function () {
       var currLink = $(this);
       var refElement = $(currLink.attr("href"));
