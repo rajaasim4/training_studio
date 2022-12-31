@@ -81,8 +81,7 @@ var top = 0;
         );
     });
   });
-
-  setTimeout(function onScroll(event) {
+  function onScroll(event) {
     var scrollPos = $(document).scrollTop();
 
     $(".nav a").each(function () {
@@ -98,7 +97,8 @@ var top = 0;
         currLink.removeClass("active");
       }
     });
-  }, 6000);
+  }
+  setTimeout(onScroll(), 6000);
 
   // Page loading animation
   $(window).on("load", function () {
